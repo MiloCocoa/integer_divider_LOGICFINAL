@@ -1,0 +1,453 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--G3_Q[0] is regn:RegR|Q[0] at FF_X20_Y1_N9
+--register power-up is low
+
+G3_Q[0] = DFFEAS(G3L3, GLOBAL(A1L22), GLOBAL(A1L51),  , ER,  ,  ,  ,  );
+
+
+--G3_Q[1] is regn:RegR|Q[1] at FF_X20_Y1_N29
+--register power-up is low
+
+G3_Q[1] = DFFEAS(F1L3, GLOBAL(A1L22), GLOBAL(A1L51),  , ER,  ,  ,  ,  );
+
+
+--G3_Q[2] is regn:RegR|Q[2] at FF_X20_Y1_N15
+--register power-up is low
+
+G3_Q[2] = DFFEAS(F1L6, GLOBAL(A1L22), GLOBAL(A1L51),  , ER,  ,  ,  ,  );
+
+
+--G3_Q[3] is regn:RegR|Q[3] at FF_X20_Y1_N27
+--register power-up is low
+
+G3_Q[3] = DFFEAS(F1L8, GLOBAL(A1L22), GLOBAL(A1L51),  , ER,  ,  ,  ,  );
+
+
+--G4_Q[0] is regn:RegQ|Q[0] at FF_X21_Y1_N17
+--register power-up is low
+
+G4_Q[0] = DFFEAS( , GLOBAL(A1L22), GLOBAL(A1L51),  , ER, F2L1,  ,  , VCC);
+
+
+--G4_Q[1] is regn:RegQ|Q[1] at FF_X21_Y1_N27
+--register power-up is low
+
+G4_Q[1] = DFFEAS( , GLOBAL(A1L22), GLOBAL(A1L51),  , ER, F2L2,  ,  , VCC);
+
+
+--G4_Q[2] is regn:RegQ|Q[2] at FF_X21_Y1_N9
+--register power-up is low
+
+G4_Q[2] = DFFEAS(G4L5, GLOBAL(A1L22), GLOBAL(A1L51),  , ER,  ,  ,  ,  );
+
+
+--G4_Q[3] is regn:RegQ|Q[3] at FF_X21_Y1_N23
+--register power-up is low
+
+G4_Q[3] = DFFEAS(F2L4, GLOBAL(A1L22), GLOBAL(A1L51),  , ER,  ,  ,  ,  );
+
+
+--y.S2 is y.S2 at FF_X19_Y1_N23
+--register power-up is low
+
+y.S2 = DFFEAS(A1L58, GLOBAL(A1L22), GLOBAL(A1L51),  ,  ,  ,  ,  ,  );
+
+
+--G1_Q[0] is regn:RegA|Q[0] at FF_X21_Y1_N25
+--register power-up is low
+
+G1_Q[0] = DFFEAS(G1L3, GLOBAL(A1L22), GLOBAL(A1L51),  ,  ,  ,  ,  ,  );
+
+
+--y.S1 is y.S1 at FF_X20_Y1_N21
+--register power-up is low
+
+y.S1 = DFFEAS(A1L56, A1L21, GLOBAL(A1L51),  ,  ,  ,  ,  ,  );
+
+
+--G2_Q[0] is regn:RegB|Q[0] at FF_X20_Y1_N13
+--register power-up is low
+
+G2_Q[0] = DFFEAS(G2L3, A1L21, GLOBAL(A1L51),  ,  ,  ,  ,  ,  );
+
+
+--F1L1 is mux:RMux|X[0]~0 at LCCOMB_X20_Y1_N2
+F1L1 = (y.S1 & (G2_Q[0] $ ((G3_Q[0])))) # (!y.S1 & (((G1_Q[0]))));
+
+
+--G2_Q[1] is regn:RegB|Q[1] at FF_X19_Y1_N17
+--register power-up is low
+
+G2_Q[1] = DFFEAS( , A1L21, GLOBAL(A1L51),  ,  , A1L15,  ,  , VCC);
+
+
+--F1L2 is mux:RMux|X[1]~1 at LCCOMB_X20_Y1_N4
+F1L2 = G2_Q[1] $ (G3_Q[1] $ (((!G3_Q[0] & G2_Q[0]))));
+
+
+--G1_Q[1] is regn:RegA|Q[1] at FF_X21_Y1_N31
+--register power-up is low
+
+G1_Q[1] = DFFEAS(G1L5, GLOBAL(A1L22), GLOBAL(A1L51),  ,  ,  ,  ,  ,  );
+
+
+--F1L3 is mux:RMux|X[1]~2 at LCCOMB_X20_Y1_N28
+F1L3 = (y.S1 & ((F1L2))) # (!y.S1 & (G1_Q[1]));
+
+
+--F1L4 is mux:RMux|X[1]~3 at LCCOMB_X20_Y1_N24
+F1L4 = (G2_Q[1] & (G3_Q[1] & ((G3_Q[0]) # (!G2_Q[0])))) # (!G2_Q[1] & (((G3_Q[0]) # (G3_Q[1])) # (!G2_Q[0])));
+
+
+--G2_Q[2] is regn:RegB|Q[2] at FF_X19_Y1_N21
+--register power-up is low
+
+G2_Q[2] = DFFEAS( , A1L21, GLOBAL(A1L51),  ,  , A1L17,  ,  , VCC);
+
+
+--F1L5 is mux:RMux|X[2]~4 at LCCOMB_X20_Y1_N22
+F1L5 = (y.S1 & (G2_Q[2] $ (G3_Q[2] $ (!F1L4))));
+
+
+--G1_Q[2] is regn:RegA|Q[2] at FF_X21_Y1_N21
+--register power-up is low
+
+G1_Q[2] = DFFEAS( , GLOBAL(A1L22), GLOBAL(A1L51),  ,  , A1L7,  ,  , VCC);
+
+
+--F1L6 is mux:RMux|X[2]~5 at LCCOMB_X20_Y1_N14
+F1L6 = (F1L5) # ((!y.S1 & G1_Q[2]));
+
+
+--G1_Q[3] is regn:RegA|Q[3] at FF_X24_Y1_N9
+--register power-up is low
+
+G1_Q[3] = DFFEAS(G1L8, GLOBAL(A1L22), GLOBAL(A1L51),  ,  ,  ,  ,  ,  );
+
+
+--G2_Q[3] is regn:RegB|Q[3] at FF_X19_Y1_N7
+--register power-up is low
+
+G2_Q[3] = DFFEAS(G2L7, A1L21, GLOBAL(A1L51),  ,  ,  ,  ,  ,  );
+
+
+--H3L1 is adder:Subtractor|full_adder:\FA_array:2:FA|temp_sum[1]~0 at LCCOMB_X20_Y1_N6
+H3L1 = (G2_Q[2] & ((!F1L4) # (!G3_Q[2]))) # (!G2_Q[2] & (!G3_Q[2] & !F1L4));
+
+
+--F1L7 is mux:RMux|X[3]~6 at LCCOMB_X20_Y1_N10
+F1L7 = G2_Q[3] $ (G3_Q[3] $ (H3L1));
+
+
+--F1L8 is mux:RMux|X[3]~7 at LCCOMB_X20_Y1_N26
+F1L8 = (y.S1 & ((F1L7))) # (!y.S1 & (G1_Q[3]));
+
+
+--F2L1 is mux:QMux|X[0]~0 at LCCOMB_X21_Y1_N26
+F2L1 = (y.S1 & !G4_Q[0]);
+
+
+--F2L2 is mux:QMux|X[1]~1 at LCCOMB_X21_Y1_N16
+F2L2 = (y.S1 & (G4_Q[0] $ (G4_Q[1])));
+
+
+--F2L3 is mux:QMux|X[2]~2 at LCCOMB_X21_Y1_N18
+F2L3 = (y.S1 & (G4_Q[2] $ (((G4_Q[0] & G4_Q[1])))));
+
+
+--H8L1 is adder:QAdder|full_adder:\FA_array:3:FA|temp_sum[0]~0 at LCCOMB_X21_Y1_N28
+H8L1 = G4_Q[3] $ (((G4_Q[0] & (G4_Q[2] & G4_Q[1]))));
+
+
+--F2L4 is mux:QMux|X[3]~3 at LCCOMB_X21_Y1_N22
+F2L4 = (y.S1 & H8L1);
+
+
+--A1L29 is FSM_outputs~0 at LCCOMB_X19_Y1_N24
+A1L29 = (A1L61 & (A1L50 & !G2_Q[2]));
+
+
+--A1L30 is FSM_outputs~1 at LCCOMB_X19_Y1_N28
+A1L30 = (!G2_Q[3] & (!G2_Q[0] & (!G2_Q[1] & A1L29)));
+
+
+--y.S0 is y.S0 at FF_X19_Y1_N27
+--register power-up is low
+
+y.S0 = DFFEAS(A1L63, GLOBAL(A1L22), GLOBAL(A1L51),  ,  ,  ,  ,  ,  );
+
+
+--A1L57 is Selector3~0 at LCCOMB_X19_Y1_N20
+A1L57 = (y.S0 & (A1L61 & !y.S1));
+
+
+--A1L59 is Selector4~0 at LCCOMB_X20_Y1_N18
+A1L59 = ((G2_Q[3] & (G3_Q[3] & !H3L1)) # (!G2_Q[3] & ((G3_Q[3]) # (!H3L1)))) # (!y.S1);
+
+
+--A1L58 is Selector3~1 at LCCOMB_X19_Y1_N22
+A1L58 = (A1L57) # ((y.S0 & ((!A1L59))) # (!y.S0 & (A1L30)));
+
+
+--A1L54 is Selector2~0 at LCCOMB_X20_Y1_N0
+A1L54 = (y.S1 & ((G3_Q[3] & ((!H3L1) # (!G2_Q[3]))) # (!G3_Q[3] & (!G2_Q[3] & !H3L1))));
+
+
+--A1L55 is Selector2~1 at LCCOMB_X19_Y1_N16
+A1L55 = (!y.S0 & A1L61);
+
+
+--C1L1 is is_zero:IsZero|ISZERO~0 at LCCOMB_X19_Y1_N4
+C1L1 = (!G2_Q[3] & (!G2_Q[2] & (A1L50 & !G2_Q[1])));
+
+
+--A1L56 is Selector2~2 at LCCOMB_X20_Y1_N20
+A1L56 = (A1L54) # ((A1L55 & ((G2_Q[0]) # (!C1L1))));
+
+
+--A1L60 is Selector5~0 at LCCOMB_X19_Y1_N0
+A1L60 = (y.S1) # ((!y.S0 & !A1L30));
+
+
+--A1L53 is Selector1~0 at LCCOMB_X19_Y1_N18
+A1L53 = (y.S1) # (A1L61);
+
+
+--Err$latch is Err$latch at LCCOMB_X19_Y1_N30
+Err$latch = (y.S0 & (Err$latch)) # (!y.S0 & ((A1L30)));
+
+
+--ER is ER at LCCOMB_X20_Y1_N30
+ER = (A1L60 & ((A1L59))) # (!A1L60 & (ER));
+
+
+--A1L42 is R[0]~output at IOOBUF_X20_Y0_N2
+A1L42 = OUTPUT_BUFFER.O(.I(G3_Q[0]), , , , , , , , , , , , , , , , , );
+
+
+--R[0] is R[0] at PIN_N9
+R[0] = OUTPUT();
+
+
+--A1L44 is R[1]~output at IOOBUF_X22_Y0_N2
+A1L44 = OUTPUT_BUFFER.O(.I(G3_Q[1]), , , , , , , , , , , , , , , , , );
+
+
+--R[1] is R[1] at PIN_K9
+R[1] = OUTPUT();
+
+
+--A1L46 is R[2]~output at IOOBUF_X14_Y0_N9
+A1L46 = OUTPUT_BUFFER.O(.I(G3_Q[2]), , , , , , , , , , , , , , , , , );
+
+
+--R[2] is R[2] at PIN_L5
+R[2] = OUTPUT();
+
+
+--A1L48 is R[3]~output at IOOBUF_X26_Y0_N9
+A1L48 = OUTPUT_BUFFER.O(.I(G3_Q[3]), , , , , , , , , , , , , , , , , );
+
+
+--R[3] is R[3] at PIN_N10
+R[3] = OUTPUT();
+
+
+--A1L33 is Q[0]~output at IOOBUF_X31_Y0_N2
+A1L33 = OUTPUT_BUFFER.O(.I(G4_Q[0]), , , , , , , , , , , , , , , , , );
+
+
+--Q[0] is Q[0] at PIN_L11
+Q[0] = OUTPUT();
+
+
+--A1L35 is Q[1]~output at IOOBUF_X26_Y0_N2
+A1L35 = OUTPUT_BUFFER.O(.I(G4_Q[1]), , , , , , , , , , , , , , , , , );
+
+
+--Q[1] is Q[1] at PIN_N11
+Q[1] = OUTPUT();
+
+
+--A1L37 is Q[2]~output at IOOBUF_X24_Y0_N9
+A1L37 = OUTPUT_BUFFER.O(.I(G4_Q[2]), , , , , , , , , , , , , , , , , );
+
+
+--Q[2] is Q[2] at PIN_L9
+Q[2] = OUTPUT();
+
+
+--A1L39 is Q[3]~output at IOOBUF_X20_Y0_N9
+A1L39 = OUTPUT_BUFFER.O(.I(G4_Q[3]), , , , , , , , , , , , , , , , , );
+
+
+--Q[3] is Q[3] at PIN_N8
+Q[3] = OUTPUT();
+
+
+--A1L28 is Err~output at IOOBUF_X10_Y0_N9
+A1L28 = OUTPUT_BUFFER.O(.I(Err$latch), , , , , , , , , , , , , , , , , );
+
+
+--Err is Err at PIN_N4
+Err = OUTPUT();
+
+
+--A1L24 is Done~output at IOOBUF_X14_Y0_N2
+A1L24 = OUTPUT_BUFFER.O(.I(y.S2), , , , , , , , , , , , , , , , , );
+
+
+--Done is Done at PIN_L7
+Done = OUTPUT();
+
+
+--A1L21 is Clock~input at IOIBUF_X16_Y0_N15
+A1L21 = INPUT_BUFFER(.I(Clock), );
+
+
+--Clock is Clock at PIN_J7
+Clock = INPUT();
+
+
+--A1L50 is Resetn~input at IOIBUF_X16_Y0_N22
+A1L50 = INPUT_BUFFER(.I(Resetn), );
+
+
+--Resetn is Resetn at PIN_J6
+Resetn = INPUT();
+
+
+--A1L61 is s~input at IOIBUF_X33_Y16_N8
+A1L61 = INPUT_BUFFER(.I(s), );
+
+
+--s is s at PIN_F13
+s = INPUT();
+
+
+--A1L3 is A[0]~input at IOIBUF_X33_Y16_N1
+A1L3 = INPUT_BUFFER(.I(A[0]), );
+
+
+--A[0] is A[0] at PIN_F12
+A[0] = INPUT();
+
+
+--A1L13 is B[0]~input at IOIBUF_X24_Y0_N1
+A1L13 = INPUT_BUFFER(.I(B[0]), );
+
+
+--B[0] is B[0] at PIN_M9
+B[0] = INPUT();
+
+
+--A1L15 is B[1]~input at IOIBUF_X22_Y0_N8
+A1L15 = INPUT_BUFFER(.I(B[1]), );
+
+
+--B[1] is B[1] at PIN_K8
+B[1] = INPUT();
+
+
+--A1L5 is A[1]~input at IOIBUF_X29_Y0_N8
+A1L5 = INPUT_BUFFER(.I(A[1]), );
+
+
+--A[1] is A[1] at PIN_M11
+A[1] = INPUT();
+
+
+--A1L17 is B[2]~input at IOIBUF_X12_Y0_N8
+A1L17 = INPUT_BUFFER(.I(B[2]), );
+
+
+--B[2] is B[2] at PIN_M6
+B[2] = INPUT();
+
+
+--A1L7 is A[2]~input at IOIBUF_X29_Y0_N1
+A1L7 = INPUT_BUFFER(.I(A[2]), );
+
+
+--A[2] is A[2] at PIN_N12
+A[2] = INPUT();
+
+
+--A1L9 is A[3]~input at IOIBUF_X31_Y0_N8
+A1L9 = INPUT_BUFFER(.I(A[3]), );
+
+
+--A[3] is A[3] at PIN_K10
+A[3] = INPUT();
+
+
+--A1L19 is B[3]~input at IOIBUF_X12_Y0_N1
+A1L19 = INPUT_BUFFER(.I(B[3]), );
+
+
+--B[3] is B[3] at PIN_N6
+B[3] = INPUT();
+
+
+
+
+
+
+
+
+
+
+
+
+--A1L51 is Resetn~inputclkctrl at CLKCTRL_G19
+A1L51 = cycloneiv_clkctrl(.INCLK[0] = A1L50) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--A1L22 is Clock~inputclkctrl at CLKCTRL_G17
+A1L22 = cycloneiv_clkctrl(.INCLK[0] = A1L21) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
+--G3L3 is regn:RegR|Q[0]~feeder at LCCOMB_X20_Y1_N8
+G3L3 = F1L1;
+
+
+--G4L5 is regn:RegQ|Q[2]~feeder at LCCOMB_X21_Y1_N8
+G4L5 = F2L3;
+
+
+--A1L63 is y.S0~feeder at LCCOMB_X19_Y1_N26
+A1L63 = A1L53;
+
+
+--G1L3 is regn:RegA|Q[0]~feeder at LCCOMB_X21_Y1_N24
+G1L3 = A1L3;
+
+
+--G2L3 is regn:RegB|Q[0]~feeder at LCCOMB_X20_Y1_N12
+G2L3 = A1L13;
+
+
+--G1L5 is regn:RegA|Q[1]~feeder at LCCOMB_X21_Y1_N30
+G1L5 = A1L5;
+
+
+--G1L8 is regn:RegA|Q[3]~feeder at LCCOMB_X24_Y1_N8
+G1L8 = A1L9;
+
+
+--G2L7 is regn:RegB|Q[3]~feeder at LCCOMB_X19_Y1_N6
+G2L7 = A1L19;
+
+

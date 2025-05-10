@@ -1,0 +1,377 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\integer_divider\simulation\modelsim
+Eadder
+Z1 w1746878465
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\altera\13.0sp1\integer_divider\simulation\modelsim
+Z5 8C:/altera/13.0sp1/integer_divider/components/adder.vhd
+Z6 FC:/altera/13.0sp1/integer_divider/components/adder.vhd
+l0
+L15
+V4DYCEem8@GiL9T]dbhlmb0
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1746881120.834000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/integer_divider/components/adder.vhd|
+Z10 !s107 C:/altera/13.0sp1/integer_divider/components/adder.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 7D6ik_h8<:d?O51bYVnSE0
+!i10b 1
+Abehavior
+R2
+R3
+DEx4 work 5 adder 0 22 4DYCEem8@GiL9T]dbhlmb0
+l42
+L26
+VL`g?6dmOofE:8QO4ESPzh0
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 9GM`;=g;6U001S^`:feIc0
+!i10b 1
+Efull_adder
+Z13 w1746878754
+Z14 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z15 DPx8 synopsys 10 attributes 0 22 J^T`lPA_8_J<l8kQiVE]>2
+Z16 DPx4 ieee 14 std_logic_misc 0 22 >dU:RInm^_6_mBJ^<6QGY2
+R2
+R3
+R4
+Z17 8C:/altera/13.0sp1/integer_divider/components/full_adder.vhd
+Z18 FC:/altera/13.0sp1/integer_divider/components/full_adder.vhd
+l0
+L22
+V4AM>7Z5nV=MMA9>h1zZYY2
+R7
+31
+Z19 !s108 1746881121.053000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/integer_divider/components/full_adder.vhd|
+Z21 !s107 C:/altera/13.0sp1/integer_divider/components/full_adder.vhd|
+R11
+R12
+!s100 MLB82eR=<fFZ?]BcEgaHN0
+!i10b 1
+Anumeric
+R14
+R15
+R16
+R2
+R3
+Z22 DEx4 work 10 full_adder 0 22 4AM>7Z5nV=MMA9>h1zZYY2
+l102
+L100
+V2G?3:6BRjdV3a;_L=bm`71
+R7
+31
+R19
+R20
+R21
+R11
+R12
+!s100 a:6mJ5_1kN7CcFfm6YfdA3
+!i10b 1
+Aoptimized
+R14
+R15
+R16
+R2
+R3
+R22
+l89
+L88
+V:oMc_2i8M5zjIf>z1AMdm2
+R7
+31
+R19
+R20
+R21
+R11
+R12
+!s100 2`C_BL;?XODC5Bl0U685I1
+!i10b 1
+Ahalfadders
+R14
+R15
+R16
+R2
+R3
+R22
+l72
+L70
+V<eiY1jAJaTGc:><dhoY;U1
+R7
+31
+R19
+R20
+R21
+R11
+R12
+!s100 5^GlKc]<4^DjDz65=cTI92
+!i10b 1
+Alogicfunc
+R14
+R15
+R16
+R2
+R3
+R22
+l59
+L58
+VIQY?e;AQhch?NQT<lbb`R3
+R7
+31
+R19
+R20
+R21
+R11
+R12
+!s100 fMJAFNTQ:Y<E5`KgBL89M0
+!i10b 1
+Einteger_divider
+Z23 w1746878393
+Z24 DPx4 work 18 project_components 0 22 5a<M^@zi?449iQLXEKcRi1
+R2
+R3
+R4
+Z25 8C:/altera/13.0sp1/integer_divider/integer_divider.vhd
+Z26 FC:/altera/13.0sp1/integer_divider/integer_divider.vhd
+l0
+L16
+VGm=3fmJoV4>R6lBC@g63Y2
+R7
+31
+Z27 !s108 1746881121.131000
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/integer_divider/integer_divider.vhd|
+Z29 !s107 C:/altera/13.0sp1/integer_divider/integer_divider.vhd|
+R11
+R12
+!s100 lM=S=005LAOODUmBUYS2V1
+!i10b 1
+Abehavior
+R24
+R2
+R3
+Z30 DEx4 work 15 integer_divider 0 22 Gm=3fmJoV4>R6lBC@g63Y2
+l41
+L32
+VeKbNc8EI7I>O7nb2I=A3k2
+R7
+31
+R27
+R28
+R29
+R11
+R12
+!s100 g??6C<CA5jX`o5iaf7BBe2
+!i10b 1
+Einteger_divider_tb
+Z31 w1746881100
+Z32 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z33 8C:/altera/13.0sp1/integer_divider/integer_divider_tb.vhd
+Z34 FC:/altera/13.0sp1/integer_divider/integer_divider_tb.vhd
+l0
+L17
+VHR0@[6oD38bYOoA_W>2>A0
+!s100 X<PJ7g@fkJKmPdZV1<iZW1
+R7
+32
+!i10b 1
+Z35 !s108 1746881137.540000
+Z36 !s90 -reportprogress|300|-work|work|C:/altera/13.0sp1/integer_divider/integer_divider_tb.vhd|
+Z37 !s107 C:/altera/13.0sp1/integer_divider/integer_divider_tb.vhd|
+Z38 o-work work -O0
+R12
+Abehavior
+R24
+R30
+R32
+R2
+R3
+DEx4 work 18 integer_divider_tb 0 22 HR0@[6oD38bYOoA_W>2>A0
+l43
+L21
+VXU3TUP;?aPWmin4OIE8Lb2
+!s100 nDPOP4F6JEGdV7QAe6<UD0
+R7
+32
+!i10b 1
+R35
+R36
+R37
+R38
+R12
+Einverter
+Z39 w1746878588
+R2
+R3
+R4
+Z40 8C:/altera/13.0sp1/integer_divider/components/inverter.vhd
+Z41 FC:/altera/13.0sp1/integer_divider/components/inverter.vhd
+l0
+L17
+VhEF=2>cgPQJPGWh:JEY6E0
+R7
+31
+Z42 !s108 1746881120.876000
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/integer_divider/components/inverter.vhd|
+Z44 !s107 C:/altera/13.0sp1/integer_divider/components/inverter.vhd|
+R11
+R12
+!s100 Z]Ta_53<bAnzk1QnZU`oN3
+!i10b 1
+Abehavior
+R2
+R3
+DEx4 work 8 inverter 0 22 hEF=2>cgPQJPGWh:JEY6E0
+l29
+L28
+VRfE]RQ7K6c:N<SFS]GTDc3
+R7
+31
+R42
+R43
+R44
+R11
+R12
+!s100 @h=j>NIfA;hkdXiS11l:43
+!i10b 1
+Eis_zero
+Z45 w1746878614
+R15
+R16
+R2
+R3
+R4
+Z46 8C:/altera/13.0sp1/integer_divider/components/is_zero.vhd
+Z47 FC:/altera/13.0sp1/integer_divider/components/is_zero.vhd
+l0
+L18
+V2IRR6lWW3dW2lhM6kCTV<0
+R7
+31
+Z48 !s108 1746881120.921000
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/integer_divider/components/is_zero.vhd|
+Z50 !s107 C:/altera/13.0sp1/integer_divider/components/is_zero.vhd|
+R11
+R12
+!s100 ml@BbMCkSg@mP<z_4[hgl3
+!i10b 1
+Abehavior
+R15
+R16
+R2
+R3
+DEx4 work 7 is_zero 0 22 2IRR6lWW3dW2lhM6kCTV<0
+l31
+L30
+VL<7o^^XS2Y<DXlDK1d^On1
+R7
+31
+R48
+R49
+R50
+R11
+R12
+!s100 NMO:=Ld?[^=YDlYWhIhJ]1
+!i10b 1
+Emux
+Z51 w1746878631
+R2
+R3
+R4
+Z52 8C:/altera/13.0sp1/integer_divider/components/mux.vhd
+Z53 FC:/altera/13.0sp1/integer_divider/components/mux.vhd
+l0
+L17
+VjE5J=:@8_C2>SE3akOdIK0
+R7
+31
+Z54 !s108 1746881120.966000
+Z55 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/integer_divider/components/mux.vhd|
+Z56 !s107 C:/altera/13.0sp1/integer_divider/components/mux.vhd|
+R11
+R12
+!s100 O=>j<?QPVT57iT4dYV^J`2
+!i10b 1
+Abehavior
+R2
+R3
+DEx4 work 3 mux 0 22 jE5J=:@8_C2>SE3akOdIK0
+l31
+L30
+VJDl^H0[82VGmD^BCG]i;n0
+R7
+31
+R54
+R55
+R56
+R11
+R12
+!s100 m4C7m>QbGbEM:d86iIEZB0
+!i10b 1
+Pproject_components
+R2
+R3
+w1746878432
+R4
+8C:/altera/13.0sp1/integer_divider/project_components.vhd
+FC:/altera/13.0sp1/integer_divider/project_components.vhd
+l0
+L14
+V5a<M^@zi?449iQLXEKcRi1
+R7
+31
+R11
+R12
+!s100 Y4>QJUUzmUP4o>:;AnTVb1
+!i10b 1
+!s108 1746881120.697000
+!s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/integer_divider/project_components.vhd|
+!s107 C:/altera/13.0sp1/integer_divider/project_components.vhd|
+Eregn
+Z57 w1746878648
+R2
+R3
+R4
+Z58 8C:/altera/13.0sp1/integer_divider/components/register.vhd
+Z59 FC:/altera/13.0sp1/integer_divider/components/register.vhd
+l0
+L16
+VIAJSoHL7J9>a]jm11edHz3
+R7
+31
+Z60 !s108 1746881121.011000
+Z61 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/integer_divider/components/register.vhd|
+Z62 !s107 C:/altera/13.0sp1/integer_divider/components/register.vhd|
+R11
+R12
+!s100 6OjG2JTgzMQ^ZB?lS5WYA3
+!i10b 1
+Abehavior
+R2
+R3
+DEx4 work 4 regn 0 22 IAJSoHL7J9>a]jm11edHz3
+l31
+L30
+V36Jf@W92gR=S5[a=X:I5e1
+R7
+31
+R60
+R61
+R62
+R11
+R12
+!s100 g;D]M0a=QZUjgM_O_FP[L1
+!i10b 1

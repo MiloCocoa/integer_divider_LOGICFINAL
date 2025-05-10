@@ -1,0 +1,319 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--R[0] is R[0]
+R[0] = OUTPUT(F3_Q[0]);
+
+
+--R[1] is R[1]
+R[1] = OUTPUT(F3_Q[1]);
+
+
+--R[2] is R[2]
+R[2] = OUTPUT(F3_Q[2]);
+
+
+--R[3] is R[3]
+R[3] = OUTPUT(F3_Q[3]);
+
+
+--Q[0] is Q[0]
+Q[0] = OUTPUT(F4_Q[0]);
+
+
+--Q[1] is Q[1]
+Q[1] = OUTPUT(F4_Q[1]);
+
+
+--Q[2] is Q[2]
+Q[2] = OUTPUT(F4_Q[2]);
+
+
+--Q[3] is Q[3]
+Q[3] = OUTPUT(F4_Q[3]);
+
+
+--Err is Err
+Err = OUTPUT(Err$latch);
+
+
+--Done is Done
+Done = OUTPUT(y.S2);
+
+
+--F3_Q[0] is regn:RegR|Q[0]
+--register power-up is low
+
+F3_Q[0] = DFFEAS(E1L1, Clock, Resetn,  , ER,  ,  ,  ,  );
+
+
+--F3_Q[1] is regn:RegR|Q[1]
+--register power-up is low
+
+F3_Q[1] = DFFEAS(E1L3, Clock, Resetn,  , ER,  ,  ,  ,  );
+
+
+--F3_Q[2] is regn:RegR|Q[2]
+--register power-up is low
+
+F3_Q[2] = DFFEAS(E1L6, Clock, Resetn,  , ER,  ,  ,  ,  );
+
+
+--F3_Q[3] is regn:RegR|Q[3]
+--register power-up is low
+
+F3_Q[3] = DFFEAS(E1L8, Clock, Resetn,  , ER,  ,  ,  ,  );
+
+
+--F4_Q[0] is regn:RegQ|Q[0]
+--register power-up is low
+
+F4_Q[0] = DFFEAS(E2L1, Clock, Resetn,  , ER,  ,  ,  ,  );
+
+
+--F4_Q[1] is regn:RegQ|Q[1]
+--register power-up is low
+
+F4_Q[1] = DFFEAS(E2L2, Clock, Resetn,  , ER,  ,  ,  ,  );
+
+
+--F4_Q[2] is regn:RegQ|Q[2]
+--register power-up is low
+
+F4_Q[2] = DFFEAS(E2L3, Clock, Resetn,  , ER,  ,  ,  ,  );
+
+
+--F4_Q[3] is regn:RegQ|Q[3]
+--register power-up is low
+
+F4_Q[3] = DFFEAS(E2L4, Clock, Resetn,  , ER,  ,  ,  ,  );
+
+
+--y.S2 is y.S2
+--register power-up is low
+
+y.S2 = DFFEAS(A1L35, Clock, Resetn,  ,  ,  ,  ,  ,  );
+
+
+--F1_Q[0] is regn:RegA|Q[0]
+--register power-up is low
+
+F1_Q[0] = DFFEAS(A[0], Clock, Resetn,  ,  ,  ,  ,  ,  );
+
+
+--y.S1 is y.S1
+--register power-up is low
+
+y.S1 = DFFEAS(A1L33, Clock, Resetn,  ,  ,  ,  ,  ,  );
+
+
+--F2_Q[0] is regn:RegB|Q[0]
+--register power-up is low
+
+F2_Q[0] = DFFEAS(B[0], Clock, Resetn,  ,  ,  ,  ,  ,  );
+
+
+--E1L1 is mux:RMux|X[0]~0
+E1L1 = (y.S1 & ((F3_Q[0] $ (F2_Q[0])))) # (!y.S1 & (F1_Q[0]));
+
+
+--Clock is Clock
+Clock = INPUT();
+
+
+--Resetn is Resetn
+Resetn = INPUT();
+
+
+--F2_Q[1] is regn:RegB|Q[1]
+--register power-up is low
+
+F2_Q[1] = DFFEAS(B[1], Clock, Resetn,  ,  ,  ,  ,  ,  );
+
+
+--E1L2 is mux:RMux|X[1]~1
+E1L2 = F3_Q[1] $ (F2_Q[1] $ (((F2_Q[0] & !F3_Q[0]))));
+
+
+--F1_Q[1] is regn:RegA|Q[1]
+--register power-up is low
+
+F1_Q[1] = DFFEAS(A[1], Clock, Resetn,  ,  ,  ,  ,  ,  );
+
+
+--E1L3 is mux:RMux|X[1]~2
+E1L3 = (y.S1 & (E1L2)) # (!y.S1 & ((F1_Q[1])));
+
+
+--E1L4 is mux:RMux|X[1]~3
+E1L4 = (F3_Q[1] & ((F3_Q[0]) # ((!F2_Q[1]) # (!F2_Q[0])))) # (!F3_Q[1] & (!F2_Q[1] & ((F3_Q[0]) # (!F2_Q[0]))));
+
+
+--F2_Q[2] is regn:RegB|Q[2]
+--register power-up is low
+
+F2_Q[2] = DFFEAS(B[2], Clock, Resetn,  ,  ,  ,  ,  ,  );
+
+
+--E1L5 is mux:RMux|X[2]~4
+E1L5 = (y.S1 & (F3_Q[2] $ (E1L4 $ (!F2_Q[2]))));
+
+
+--F1_Q[2] is regn:RegA|Q[2]
+--register power-up is low
+
+F1_Q[2] = DFFEAS(A[2], Clock, Resetn,  ,  ,  ,  ,  ,  );
+
+
+--E1L6 is mux:RMux|X[2]~5
+E1L6 = (E1L5) # ((F1_Q[2] & !y.S1));
+
+
+--F1_Q[3] is regn:RegA|Q[3]
+--register power-up is low
+
+F1_Q[3] = DFFEAS(A[3], Clock, Resetn,  ,  ,  ,  ,  ,  );
+
+
+--F2_Q[3] is regn:RegB|Q[3]
+--register power-up is low
+
+F2_Q[3] = DFFEAS(B[3], Clock, Resetn,  ,  ,  ,  ,  ,  );
+
+
+--G3L1 is adder:Subtractor|full_adder:\FA_array:2:FA|temp_sum[1]~0
+G3L1 = (F2_Q[2] & ((!E1L4) # (!F3_Q[2]))) # (!F2_Q[2] & (!F3_Q[2] & !E1L4));
+
+
+--E1L7 is mux:RMux|X[3]~6
+E1L7 = F2_Q[3] $ (G3L1 $ (F3_Q[3]));
+
+
+--E1L8 is mux:RMux|X[3]~7
+E1L8 = (y.S1 & ((E1L7))) # (!y.S1 & (F1_Q[3]));
+
+
+--E2L1 is mux:QMux|X[0]~0
+E2L1 = (!F4_Q[0] & y.S1);
+
+
+--E2L2 is mux:QMux|X[1]~1
+E2L2 = (y.S1 & (F4_Q[0] $ (F4_Q[1])));
+
+
+--E2L3 is mux:QMux|X[2]~2
+E2L3 = (y.S1 & (F4_Q[2] $ (((F4_Q[0] & F4_Q[1])))));
+
+
+--G8L1 is adder:QAdder|full_adder:\FA_array:3:FA|temp_sum[0]~0
+G8L1 = F4_Q[3] $ (((F4_Q[0] & (F4_Q[1] & F4_Q[2]))));
+
+
+--E2L4 is mux:QMux|X[3]~3
+E2L4 = (y.S1 & G8L1);
+
+
+--s is s
+s = INPUT();
+
+
+--A1L16 is FSM_outputs~0
+A1L16 = (s & (Resetn & !F2_Q[2]));
+
+
+--A1L17 is FSM_outputs~1
+A1L17 = (!F2_Q[0] & (!F2_Q[1] & (!F2_Q[3] & A1L16)));
+
+
+--y.S0 is y.S0
+--register power-up is low
+
+y.S0 = DFFEAS(A1L30, Clock, Resetn,  ,  ,  ,  ,  ,  );
+
+
+--A1L34 is Selector3~0
+A1L34 = (s & (y.S0 & !y.S1));
+
+
+--A1L36 is Selector4~0
+A1L36 = ((F3_Q[3] & ((!G3L1) # (!F2_Q[3]))) # (!F3_Q[3] & (!F2_Q[3] & !G3L1))) # (!y.S1);
+
+
+--A1L35 is Selector3~1
+A1L35 = (A1L34) # ((y.S0 & ((!A1L36))) # (!y.S0 & (A1L17)));
+
+
+--A[0] is A[0]
+A[0] = INPUT();
+
+
+--A1L31 is Selector2~0
+A1L31 = (y.S1 & ((F3_Q[3] & ((!G3L1) # (!F2_Q[3]))) # (!F3_Q[3] & (!F2_Q[3] & !G3L1))));
+
+
+--A1L32 is Selector2~1
+A1L32 = (s & !y.S0);
+
+
+--B1L1 is is_zero:IsZero|ISZERO~0
+B1L1 = (Resetn & (!F2_Q[1] & (!F2_Q[2] & !F2_Q[3])));
+
+
+--A1L33 is Selector2~2
+A1L33 = (A1L31) # ((A1L32 & ((F2_Q[0]) # (!B1L1))));
+
+
+--B[0] is B[0]
+B[0] = INPUT();
+
+
+--A1L37 is Selector5~0
+A1L37 = (y.S1) # ((!A1L17 & !y.S0));
+
+
+--B[1] is B[1]
+B[1] = INPUT();
+
+
+--A[1] is A[1]
+A[1] = INPUT();
+
+
+--B[2] is B[2]
+B[2] = INPUT();
+
+
+--A[2] is A[2]
+A[2] = INPUT();
+
+
+--A[3] is A[3]
+A[3] = INPUT();
+
+
+--B[3] is B[3]
+B[3] = INPUT();
+
+
+--A1L30 is Selector1~0
+A1L30 = (y.S1) # (s);
+
+
+--Err$latch is Err$latch
+Err$latch = (y.S0 & ((Err$latch))) # (!y.S0 & (A1L17));
+
+
+--ER is ER
+ER = (A1L37 & (A1L36)) # (!A1L37 & ((ER)));
+
+

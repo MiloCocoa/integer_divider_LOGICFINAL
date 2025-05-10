@@ -1,0 +1,151 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do integer_divider_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/project_components.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package project_components
+# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/components/adder.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity adder
+# -- Compiling architecture Behavior of adder
+# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/components/inverter.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity inverter
+# -- Compiling architecture Behavior of inverter
+# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/components/is_zero.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity is_zero
+# -- Compiling architecture Behavior of is_zero
+# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/components/mux.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux
+# -- Compiling architecture Behavior of mux
+# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/components/register.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regn
+# -- Compiling architecture Behavior of regn
+# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/components/full_adder.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package VITAL_Timing
+# -- Compiling entity full_adder
+# -- Compiling architecture LogicFunc of full_adder
+# -- Compiling architecture HalfAdders of full_adder
+# -- Loading entity full_adder
+# -- Compiling architecture Optimized of full_adder
+# -- Loading entity full_adder
+# -- Compiling architecture Numeric of full_adder
+# -- Loading entity full_adder
+# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/integer_divider.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package project_components
+# -- Compiling entity integer_divider
+# -- Compiling architecture Behavior of integer_divider
+# ** Warning: C:/altera/13.0sp1/integer_divider/integer_divider.vhd(113): (vcom-1074) Non-locally static OTHERS choice is allowed only if it is the only choice of the only association.
+# 
+# ** Warning: C:/altera/13.0sp1/integer_divider/integer_divider.vhd(129): Cannot associate port "Q" of mode OUT with port "R" of mode BUFFER.
+# ** Warning: C:/altera/13.0sp1/integer_divider/integer_divider.vhd(134): Cannot associate port "Q" of mode OUT with port "Q" of mode BUFFER.
+# 
+vcom -reportprogress 300 -work work C:/altera/13.0sp1/integer_divider/integer_divider_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity integer_divider_tb
+# -- Compiling architecture Behavior of integer_divider_tb
+# -- Loading package project_components
+# -- Loading entity integer_divider
+vsim rtl_work.integer_divider_tb(behavior)
+# vsim rtl_work.integer_divider_tb(behavior) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.project_components
+# Loading rtl_work.integer_divider_tb(behavior)
+# Loading rtl_work.integer_divider(behavior)
+# Loading rtl_work.regn(behavior)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading rtl_work.is_zero(behavior)
+# Loading rtl_work.inverter(behavior)
+# Loading rtl_work.adder(behavior)
+# Loading ieee.vital_timing(body)
+# Loading rtl_work.full_adder(numeric)
+# Loading rtl_work.mux(behavior)
+add wave -position insertpoint  \
+sim:/integer_divider_tb/Clock \
+sim:/integer_divider_tb/Resetn \
+sim:/integer_divider_tb/s \
+sim:/integer_divider_tb/A \
+sim:/integer_divider_tb/B \
+sim:/integer_divider_tb/Q \
+sim:/integer_divider_tb/R \
+sim:/integer_divider_tb/Done \
+sim:/integer_divider_tb/Err \
+sim:/integer_divider_tb/N \
+sim:/integer_divider_tb/clk_period
+run 500000
+# ** Note: Test 1 passed: Correct quotient (4)
+#    Time: 75 ns  Iteration: 3  Instance: /integer_divider_tb
+# ** Note: Test 1 passed: Correct remainder (0)
+#    Time: 75 ns  Iteration: 3  Instance: /integer_divider_tb
+# ** Note: Test 2 passed: Correct quotient (0)
+#    Time: 105 ns  Iteration: 3  Instance: /integer_divider_tb
+# ** Note: Test 2 passed: Correct remainder (3)
+#    Time: 105 ns  Iteration: 3  Instance: /integer_divider_tb
+# ** Note: Test 3 passed: Correctly detected division by zero
+#    Time: 125 ns  Iteration: 3  Instance: /integer_divider_tb
+# ** Note: Test 4 passed: Correct quotient (8)
+#    Time: 235 ns  Iteration: 3  Instance: /integer_divider_tb
+# ** Note: Test 4 passed: Correct remainder (0)
+#    Time: 235 ns  Iteration: 3  Instance: /integer_divider_tb
+# ** Note: Test 5 passed: Correct quotient (7)
+#    Time: 335 ns  Iteration: 3  Instance: /integer_divider_tb
+# ** Note: Test 5 passed: Correct remainder (4)
+#    Time: 335 ns  Iteration: 3  Instance: /integer_divider_tb
+# ** Note: Test 6 passed: Correct quotient (1)
+#    Time: 375 ns  Iteration: 3  Instance: /integer_divider_tb
+# ** Note: Test 6 passed: Correct remainder (0)
+#    Time: 375 ns  Iteration: 3  Instance: /integer_divider_tb
+# ** Note: Test 7 passed: Correct quotient (7)
+#    Time: 475 ns  Iteration: 3  Instance: /integer_divider_tb
+# ** Note: Test 7 passed: Correct remainder (10)
+#    Time: 475 ns  Iteration: 3  Instance: /integer_divider_tb
