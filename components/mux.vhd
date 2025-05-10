@@ -9,27 +9,28 @@
 --    n-bit 2-to-1 multiplexer component
 --    Selects between two input vectors based on a control signal (SEL).
 
--- Include IEEE standard logic library
-LIBRARY IEEE;
-USE IEEE.STD_LOGIC_1164.ALL;
+-- Include IEEE standard logic library for digital signal types
+LIBRARY IEEE;                          -- Import IEEE library
+USE IEEE.STD_LOGIC_1164.ALL;           -- Use standard logic types like STD_LOGIC and STD_LOGIC_VECTOR
 
 -- Entity declaration for n-bit multiplexer
 ENTITY mux IS
     GENERIC (
-        N: INTEGER := 4  -- Defines width of input and output vectors (default: 4 bits)
+        N: INTEGER := 4                -- Generic parameter for vector width (default 4 bits)
     );
     PORT (
-        SEL : IN  STD_LOGIC;                      -- Selector input (1-bit)
-        D0  : IN  STD_LOGIC_VECTOR(N-1 DOWNTO 0); -- Input vector 0
-        D1  : IN  STD_LOGIC_VECTOR(N-1 DOWNTO 0); -- Input vector 1
-        X   : OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0)  -- Output vector
+        SEL : IN  STD_LOGIC;                      -- Selector input (1-bit) to choose between D0 and D1
+        D0  : IN  STD_LOGIC_VECTOR(N-1 DOWNTO 0); -- First input vector (N-bit)
+        D1  : IN  STD_LOGIC_VECTOR(N-1 DOWNTO 0); -- Second input vector (N-bit)
+        X   : OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0)  -- Output vector (N-bit), result of selection
     );
 END ENTITY mux;
 
 -- Architecture defining the behavior of the mux
-ARCHITECTURE Behavior OF mux IS
+ARCHITECTURE Behavior OF mux IS       -- Begin behavioral architecture
 BEGIN
-    -- When SEL is '1', output X gets value of D1
-    -- When SEL is '0', output X gets value of D0
-    X <= D1 WHEN (SEL = '1') ELSE D0;
-END ARCHITECTURE Behavior;
+    -- Concurrent signal assignment:
+    -- If SEL = '1', assign D1 to output X
+    -- If SEL = '0', assign D0 to output X
+    X <= D1 WHEN (SEL = '1') ELSE D0; -- Ternary conditional logic for mux behavior
+END ARCHITECTURE Behavior;            -- End of architecture
