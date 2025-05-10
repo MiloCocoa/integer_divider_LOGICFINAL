@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "05/10/2025 19:48:49"
+-- DATE "05/10/2025 20:34:32"
 
 -- 
 -- Device: Altera EP4CGX15BF14C6 Package FBGA169
@@ -154,9 +154,9 @@ SIGNAL \Err$latch~combout\ : std_logic;
 SIGNAL \Selector3~1_combout\ : std_logic;
 SIGNAL \y.S2~q\ : std_logic;
 SIGNAL \RegA|Q\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \RegQ|Q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \RegR|Q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \RegB|Q\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \RegQ|Q\ : std_logic_vector(3 DOWNTO 0);
 
 BEGIN
 
