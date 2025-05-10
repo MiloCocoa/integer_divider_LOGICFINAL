@@ -1,8 +1,8 @@
--- Author(s):        Nuttanon Pongpunlux 6538050421
---                   Siraphop Wannasanmethar 6538213421
---                   Supadet Udomgewganchana 6538205421
+-- Author(s):     Nuttanon Pongpunlux 6538050421
+--                Siraphop Wannasanmethar 6538213421
+--                Supadet Udomgewganchana 6538205421
 
--- Date:             10 May 2025
+-- Date:          10 May 2025
 
 -- Description:
 --      Logic Design (2147307) Final Project
