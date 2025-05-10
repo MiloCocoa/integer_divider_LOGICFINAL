@@ -10,27 +10,27 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/project_components.vhd}
+# vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/project_components.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package project_components
-# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/components/adder.vhd}
+# vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/adder.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity adder
 # -- Compiling architecture Behavior of adder
-# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/components/inverter.vhd}
+# vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/inverter.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity inverter
 # -- Compiling architecture Behavior of inverter
-# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/components/is_zero.vhd}
+# vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/is_zero.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -39,21 +39,21 @@
 # -- Loading package std_logic_misc
 # -- Compiling entity is_zero
 # -- Compiling architecture Behavior of is_zero
-# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/components/mux.vhd}
+# vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/mux.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mux
 # -- Compiling architecture Behavior of mux
-# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/components/register.vhd}
+# vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/register.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity regn
 # -- Compiling architecture Behavior of regn
-# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/components/full_adder.vhd}
+# vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/full_adder.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -63,13 +63,7 @@
 # -- Loading package VITAL_Timing
 # -- Compiling entity full_adder
 # -- Compiling architecture LogicFunc of full_adder
-# -- Compiling architecture HalfAdders of full_adder
-# -- Loading entity full_adder
-# -- Compiling architecture Optimized of full_adder
-# -- Loading entity full_adder
-# -- Compiling architecture Numeric of full_adder
-# -- Loading entity full_adder
-# vcom -93 -work work {C:/altera/13.0sp1/integer_divider/integer_divider.vhd}
+# vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/integer_divider.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -77,12 +71,12 @@
 # -- Loading package project_components
 # -- Compiling entity integer_divider
 # -- Compiling architecture Behavior of integer_divider
-# ** Warning: C:/altera/13.0sp1/integer_divider/integer_divider.vhd(113): (vcom-1074) Non-locally static OTHERS choice is allowed only if it is the only choice of the only association.
+# ** Warning: C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/integer_divider.vhd(113): (vcom-1074) Non-locally static OTHERS choice is allowed only if it is the only choice of the only association.
 # 
-# ** Warning: C:/altera/13.0sp1/integer_divider/integer_divider.vhd(129): Cannot associate port "Q" of mode OUT with port "R" of mode BUFFER.
-# ** Warning: C:/altera/13.0sp1/integer_divider/integer_divider.vhd(134): Cannot associate port "Q" of mode OUT with port "Q" of mode BUFFER.
+# ** Warning: C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/integer_divider.vhd(129): Cannot associate port "Q" of mode OUT with port "R" of mode BUFFER.
+# ** Warning: C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/integer_divider.vhd(134): Cannot associate port "Q" of mode OUT with port "Q" of mode BUFFER.
 # 
-vcom -reportprogress 300 -work work C:/altera/13.0sp1/integer_divider/integer_divider_tb.vhd
+vcom -reportprogress 300 -work work C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/integer_divider_tb.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -108,7 +102,7 @@ vsim rtl_work.integer_divider_tb(behavior)
 # Loading rtl_work.inverter(behavior)
 # Loading rtl_work.adder(behavior)
 # Loading ieee.vital_timing(body)
-# Loading rtl_work.full_adder(numeric)
+# Loading rtl_work.full_adder(logicfunc)
 # Loading rtl_work.mux(behavior)
 add wave -position insertpoint  \
 sim:/integer_divider_tb/Clock \
