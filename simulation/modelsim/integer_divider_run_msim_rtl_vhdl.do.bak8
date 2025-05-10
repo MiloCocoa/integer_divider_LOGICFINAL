@@ -1,0 +1,16 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/project_components.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/adder.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/inverter.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/is_zero.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/mux.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/register.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/full_adder.vhd}
+vcom -93 -work work {C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/integer_divider.vhd}
+

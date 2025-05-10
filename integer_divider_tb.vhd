@@ -2,7 +2,7 @@
 --                Siraphop Wannasanmethar 6538213421
 --                Supadet Udomgewganchana 6538205421
 --
--- Date:          10 May 2025  -- Date of creation/modification
+-- Date:          10 May 2025
 --
 -- Description
 --    Logic Design (2147307) Final Project
@@ -69,12 +69,12 @@ BEGIN
     -- Stimulus process (applies test cases)
     stim_proc: PROCESS
     BEGIN
-        -- Test 1: Apply reset
+
         Resetn <= '0';               -- Assert reset
         WAIT FOR clk_period;         -- Hold reset for one cycle
         Resetn <= '1';               -- Deassert reset
         
-        -- Test 2: 24 / 6 = 4 remainder 0
+        -- Test 1: 24 / 6 = 4 remainder 0
         A <= std_logic_vector(to_unsigned(24, N));  -- Load 24
         B <= std_logic_vector(to_unsigned(6, N));   -- Load 6
         WAIT FOR clk_period;
@@ -94,7 +94,7 @@ BEGIN
         WAIT FOR clk_period;
         s <= '0';                    -- Clear start
 
-        -- Test 3: 3 / 8 = 0 remainder 3
+        -- Test 2: 3 / 8 = 0 remainder 3
         A <= std_logic_vector(to_unsigned(3, N));
         B <= std_logic_vector(to_unsigned(8, N));
         WAIT FOR clk_period;
@@ -114,7 +114,7 @@ BEGIN
         WAIT FOR clk_period;
         s <= '0';
 
-        -- Test 4: 42 / 0 (should raise error)
+        -- Test 3: 42 / 0 (should raise error)
         A <= std_logic_vector(to_unsigned(42, N));
         B <= std_logic_vector(to_unsigned(0, N));
         WAIT FOR clk_period;
@@ -129,7 +129,7 @@ BEGIN
         WAIT FOR clk_period;
         s <= '0';
 
-        -- Test 5: 200 / 25 = 8 remainder 0
+        -- Test 4: 200 / 25 = 8 remainder 0
         A <= std_logic_vector(to_unsigned(200, N));
         B <= std_logic_vector(to_unsigned(25, N));
         WAIT FOR clk_period;
@@ -149,7 +149,7 @@ BEGIN
         WAIT FOR clk_period;
         s <= '0';
 
-        -- Test 6: 53 / 7 = 7 remainder 4
+        -- Test 5: 53 / 7 = 7 remainder 4
         A <= std_logic_vector(to_unsigned(53, N));
         B <= std_logic_vector(to_unsigned(7, N));
         WAIT FOR clk_period;
@@ -169,7 +169,7 @@ BEGIN
         WAIT FOR clk_period;
         s <= '0';
 
-        -- Test 7: 255 / 255 = 1 remainder 0
+        -- Test 6: 255 / 255 = 1 remainder 0
         A <= std_logic_vector(to_unsigned(255, N));
         B <= std_logic_vector(to_unsigned(255, N));
         WAIT FOR clk_period;
@@ -189,7 +189,7 @@ BEGIN
         WAIT FOR clk_period;
         s <= '0';
 
-        -- Test 8: 101 / 13 = 7 remainder 10
+        -- Test 7: 101 / 13 = 7 remainder 10
         A <= std_logic_vector(to_unsigned(101, N));
         B <= std_logic_vector(to_unsigned(13, N));
         WAIT FOR clk_period;

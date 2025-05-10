@@ -15,7 +15,7 @@ L15
 V4DYCEem8@GiL9T]dbhlmb0
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1746888794.755000
+Z8 !s108 1746892506.853000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/adder.vhd|
 Z10 !s107 C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/adder.vhd|
 Z11 o-93 -work work -O0
@@ -53,7 +53,7 @@ L22
 V4AM>7Z5nV=MMA9>h1zZYY2
 R7
 31
-Z19 !s108 1746888795.772000
+Z19 !s108 1746892507.838000
 Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/full_adder.vhd|
 Z21 !s107 C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/full_adder.vhd|
 R11
@@ -80,7 +80,7 @@ R12
 !s100 n2anXW0HMi^4bJI;N6cFf1
 !i10b 1
 Einteger_divider
-Z22 w1746888724
+Z22 w1746889568
 Z23 DPx4 work 18 project_components 0 22 5a<M^@zi?449iQLXEKcRi1
 R2
 R3
@@ -92,7 +92,7 @@ L16
 VGm=3fmJoV4>R6lBC@g63Y2
 R7
 31
-Z26 !s108 1746888795.827000
+Z26 !s108 1746892507.891000
 Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/integer_divider.vhd|
 Z28 !s107 C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/integer_divider.vhd|
 R11
@@ -117,7 +117,7 @@ R12
 !s100 g??6C<CA5jX`o5iaf7BBe2
 !i10b 1
 Einteger_divider_tb
-Z30 w1746888733
+Z30 w1746892487
 Z31 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R2
 R3
@@ -131,7 +131,7 @@ VHR0@[6oD38bYOoA_W>2>A0
 R7
 32
 !i10b 1
-Z34 !s108 1746888800.397000
+Z34 !s108 1746892511.132000
 Z35 !s90 -reportprogress|300|-work|work|C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/integer_divider_tb.vhd|
 Z36 !s107 C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/integer_divider_tb.vhd|
 Z37 o-work work -O0
@@ -167,7 +167,7 @@ L17
 VhEF=2>cgPQJPGWh:JEY6E0
 R7
 31
-Z41 !s108 1746888794.799000
+Z41 !s108 1746892507.634000
 Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/inverter.vhd|
 Z43 !s107 C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/inverter.vhd|
 R11
@@ -204,7 +204,7 @@ L18
 V2IRR6lWW3dW2lhM6kCTV<0
 R7
 31
-Z47 !s108 1746888794.851000
+Z47 !s108 1746892507.685000
 Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/is_zero.vhd|
 Z49 !s107 C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/is_zero.vhd|
 R11
@@ -241,7 +241,7 @@ L17
 VjE5J=:@8_C2>SE3akOdIK0
 R7
 31
-Z53 !s108 1746888794.894000
+Z53 !s108 1746892507.741000
 Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/mux.vhd|
 Z55 !s107 C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/mux.vhd|
 R11
@@ -280,7 +280,7 @@ R11
 R12
 !s100 Y4>QJUUzmUP4o>:;AnTVb1
 !i10b 1
-!s108 1746888794.717000
+!s108 1746892506.811000
 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/project_components.vhd|
 !s107 C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/project_components.vhd|
 Eregn
@@ -295,7 +295,7 @@ L16
 VIAJSoHL7J9>a]jm11edHz3
 R7
 31
-Z59 !s108 1746888794.943000
+Z59 !s108 1746892507.792000
 Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/register.vhd|
 Z61 !s107 C:/Users/User/Desktop/GitHub/integer_divider_LOGICFINAL/components/register.vhd|
 R11
